@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 4 by Rolando Tahum</title>
+<link href="mystyle.css" rel="stylesheet"/>
+<style>
+body
+{ background-image:url('./images/bg5.png');
+  background-size:cover;
+  background-size:130% 121%;
+  background-repeat:no-repeat;
+}
+div
+{ background-image:url('./images/bg5.png');
+  background-size:cover;
+  background-size:130% 105%;
+}
+</style>
+</head>
+<body>
+<h1> Program 4 : Average of all Quiz </h1>
+<div class="container">
+<label for="Num1"> Enter First Quiz: </label><br/>
+<input type="NUMBER" id = "Num1" /> <br/>
+<label for="Num2"> Enter Second Quiz: </label><br/>
+<input type="NUMBER" id = "Num2" /> <br/>
+<label for="Num3"> Enter Third Quiz: </label> <br/>
+<input type="NUMBER" id = "Num3" /> <br/>
+<label for="Num4"> Enter Fourth Quiz: </label> <br/>
+<input type="NUMBER" id = "Num4" /> <br/>
+<button onclick ="average()"> AVERAGE </button> <br/>
+<button onclick ="ClearFields()"> CLEAR </button> <br/>
+<h1 id='average'> AVERAGE: </h1>
+<h2 id='remark'> REMARK: </h2>
+</div>
+<a href="index.html" class="btn-home"> <img src="./images/back.png" alt="homepage back button" style="width:42px;height:42p;"> </p>
+
+<script>
+ function average()
+
+{
+  var a = parseFloat(document.getElementById("Num1").value);
+  var b = parseFloat(document.getElementById("Num2").value);
+  var c = parseFloat(document.getElementById("Num3").value);
+  var d = parseFloat(document.getElementById("Num4").value);  
+  var average = (a+b+c+d)/4;
+
+  	if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d)) {
+        alert("Please enter your grades.");
+        return;
+   	 }
+
+ if (a < 50 || a > 100 || b < 50 || b > 100 || c < 50 || c > 100 || d < 50 || d > 100) {
+        alert("Grades must be valid.");
+        return;
+    }
+
+if (average>=75)
+{
+  document.getElementById("remark").innerHTML="REMARK:PASSED";
+}
+else
+{
+ document.getElementById("remark").innerHTML="REMARK:FAILED";
+}
+ document.getElementById("average").innerHTML="AVERAGE: " + average ;
+}
+
+function ClearFields() {
+
+     document.getElementById("Num1").value = " ";
+     document.getElementById("Num2").value = " ";
+    document.getElementById("Num3").value = " ";
+    document.getElementById("Num4").value = " ";
+     document.getElementById("average").innerHTML = "AVERAGE:";
+    document.getElementById("remark").innerHTML = "REMARK: ";
+document.body.style.backgroundColor = "#333"; // Change background color to blue
+}
+
+</script>
+
+
+
+</body>
+</html>

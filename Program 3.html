@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 3 by Rolando Tahum</title>
+<link href="mystyle.css" rel="stylesheet" />
+<style>
+body
+{ background-image:url('./images/bg4.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+  background-repeat:no-repeat;
+}
+div
+{ background-image:url('./images/bg4.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+}
+</style>
+</head>
+<body>
+<h1> Program 3 : < OR > </h1>
+<div class="container">
+<br/> <label for="Num1"> Enter First Number: </label> <br/>
+<input type="NUMBER" id = "Num1" /> <br/>
+<label for="Num2"> Enter Second Number: </label> <br/>
+<input type="NUMBER" id = "Num2" /> <br/>
+<button onclick ="compare()"> Compare </button> <br/>
+<button onclick ="ClearFields()"> CLEAR </button> <br/>
+<p id='result'> RESULT: </p> </div>
+<a href="index.html" class="btn-home"> <img src="./images/back.png" alt="homepage back button" style="width:42px;height:42p;"> </p>
+
+<script>
+ function compare()
+
+{
+  var a = parseFloat(document.getElementById("Num1").value);
+  var b = parseFloat(document.getElementById("Num2").value); 
+  var result = a,b;
+
+  	if (isNaN(a) || isNaN(b)) {
+        alert("Please enter a number.");
+        return;
+   	 }
+
+if (a>b)
+{
+  document.getElementById("result").innerHTML="RESULT: <u>" + a + " >  " + b +"</u>";
+}
+else if (a<b)
+{
+ document.getElementById("result").innerHTML="RESULT: <u>" + a + " <  " + b +"</u>";
+}
+else
+{
+ document.getElementById("result").innerHTML="RESULT: <u>" + a + " =  " + b +"</u>";
+}
+
+}
+ 
+function ClearFields() {
+
+     document.getElementById("Num1").value = " ";
+     document.getElementById("Num2").value = " ";   
+     document.getElementById("result").innerHTML = "RESULT: ";
+}
+
+</script>
+
+
+
+</body>
+</html>

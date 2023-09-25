@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 2 by Rolando Tahum </title>
+<link href="mystyle.css" rel="stylesheet"/>
+<style>
+body
+{ background-image:url('./images/bg3.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+  background-repeat:no-repeat;
+}
+div
+{ background-image:url('./images/bg3.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+}
+</style>
+</head>
+<body>
+<h1> Program 2 : Positive OR Negative </h1>
+<div class="container">
+<br/> <label for="num"> Enter Number: </label> <br/>
+<input type="number" id = 'num' /> <br/> <br/><br/>
+<button onclick ="check()"> Check </button> <br/>
+<button onclick ="ClearFields()"> CLEAR </button> <br/>
+<p id='result'> POSITIVE OR NEGATIVE </p> </div>
+<a href="index.html" class="btn-home"> <img src="./images/back.png" alt="homepage back button" style="width:42px;height:42p;"></p>
+
+<script>
+ function check()
+{
+  var num = parseFloat(document.getElementById('num').value);
+
+if (isNaN(num)) {
+        alert("Enter a number.");
+        return;
+   	 }
+
+  if(num==0)
+{
+  document.getElementById('result').innerHTML='POSITIVE OR NEGATIVE';
+}
+ else if(num>0)
+{
+  document.getElementById('result').innerHTML='<mark style="background-color:green";>POSITIVE</mark> OR NEGATIVE';
+}
+else if(num<0)
+{
+  document.getElementById('result').innerHTML='POSITIVE OR <mark style="background-color:red";>NEGATIVE</p>';
+}
+}
+ function ClearFields() {
+
+     document.getElementById("num").value = " ";
+     document.getElementById("result").innerHTML = "POSITIVE OR NEGATIVE ";
+}
+</script>
+
+
+</body>
+</html>

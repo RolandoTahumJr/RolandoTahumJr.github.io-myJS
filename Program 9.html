@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 9 by Rolando Tahum </title>
+<link href="mystyle.css" rel="stylesheet"/>
+<style>
+body
+{ background-image:url('./images/bg12.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+  background-repeat:no-repeat;
+}
+div
+{ background-image:url('./images/bg11.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+}
+</style>
+</head>
+<body>
+<h1> Program 9 : Base 60 grading  </h1>
+<div class="container">
+<br/> <br/> <br/> <label for="num1"> Enter your score: </label> <br/> <br/>
+<input type="number" id = 'num1' /> <br/> <br/><br/> <br/> 
+<br/> <label for="num2"> Enter the number of items: </label> <br/> <br/>
+<input type="number" id = 'num2' /> <br/> <br/><br/> <br/>
+<button onclick ="check()"> Compute </button> <br/>
+<button onclick ="ClearFields()"> CLEAR </button> <br/>
+<p id='result'>0/0*60+40 </p> </div>
+<a href="index.html" class="btn-home"> <img src="./images/back.png" alt="homepage back button" style="width:42px;height:42p;"></p>
+
+<script>
+
+ function check()
+{ var a = parseFloat(document.getElementById('num1').value);
+  var b = parseFloat(document.getElementById('num2').value);
+  var c = (a/b)*60+40;
+ 
+if (isNaN(a) || isNaN(b)) {
+        alert("Enter a number.");
+        return;
+   	 }
+
+if (c <= 74)
+{ document.getElementById('result').innerHTML= "SEE YOU NEXT SEM :)" ;
+}
+ else if(c <= 74.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : NOT BAD";
+}
+else if (c <= 80.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : NOT BAD";
+}
+else if (c <= 81.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : GOOD";
+}
+else if (c <= 85.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : GOOD";
+}
+else if (c <= 86.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : VERY GOOD";
+}
+else if (c <= 90.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : VERY GOOD";
+}
+else if (c <= 91.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : AMAZING";
+}
+else if (c <= 95.9)
+{
+  document.getElementById('result').innerHTML= "REMARK : AMAZING";
+}
+else if (c <= 96.9 )
+{
+  document.getElementById('result').innerHTML= "REMARK : EXCELLENT" ;
+}
+else if (c >100 )
+{
+  document.getElementById('result').innerHTML= "REMARK : EXCELLENT" ;
+}
+}
+ function ClearFields() {
+
+     document.getElementById("num1").value = " ";
+     document.getElementById("num2").value = " ";
+     document.getElementById("result").innerHTML = "0/0*60+40";
+}
+</script>
+
+
+</body>
+</html>

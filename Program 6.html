@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 6 by Rolando Tahum</title>
+<link href="mystyle.css" rel="stylesheet"/>
+<style>
+body
+{ background-image:url('./images/bg7.jpg');
+  background-size:cover;
+  background-size:130% 116%;
+  background-repeat:no-repeat;
+}
+div
+{ background-image:url('./images/bg7.jpg');
+  background-size:cover;
+  background-size:126% 116%;
+}
+</style>
+</head>
+<body>
+<h1> Program 6 : Voter Identification </h1>
+<div class="container"> <br/>
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname" >
+<label for="lname">Last name:</label> 
+<input type="text" id="lname" name="lname" ><br><br>
+<label for="age"> Enter your age: </label> 
+<input type="NUMBER" id = "age" /> <br/> <br/> 
+<button onclick ="identify()"> CHECK </button> <br/>
+<button onclick ="ClearFields()"> CLEAR </button> <br/>
+<p id='result'> STATUS :  </p> </div>
+<a href="index.html" class="btn-home"> <img src="./images/back.png" alt="homepage back button" style="width:42px;height:42p;"> </p>
+
+<script>
+ function identify()
+{ var a = parseFloat(document.getElementById("fname").value);
+  var b = parseFloat(document.getElementById("lname").value);
+  var c = parseFloat(document.getElementById("age").value);
+  var result = a;
+
+
+
+if ( a < 0 || a > 0 || b < 0 || b > 0 )
+{ alert("Please enter a valid name.");
+  return;
+}
+
+if ( c > 115 )
+{ alert("Please enter a valid age");
+  return;
+}
+
+if (c>18)
+{ 
+  document.getElementById("result").innerHTML="STATUS : You can vote";
+}
+else if (c<17)
+{ 
+ document.getElementById("result").innerHTML="STATUS : You can't vote. ";
+}
+else
+{ 
+ document.getElementById("result").innerHTML="STATUS : ???";
+}
+}
+
+function ClearFields() {
+
+     document.getElementById("fname").value = " ";
+     document.getElementById("lname").value = " ";
+     document.getElementById("age").value = " ";
+     document.getElementById("result").innerHTML = "STATUS :";
+}
+
+</script>
+
+
+
+</body>
+</html>

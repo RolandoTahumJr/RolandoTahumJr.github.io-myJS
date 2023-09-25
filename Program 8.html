@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Program 8 by Rolando Tahum </title>
+<link href="mystyle.css" rel="stylesheet"/>
+<style>
+body
+{ background-image:url('./images/bg10.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+  background-repeat:no-repeat;
+}
+div
+{ background-image:url('./images/bg10.jpg');
+  background-size:cover;
+  background-size:100% 116%;
+}
+</style>
+</head>
+<body>
+<h1> Program 8 : EVEN OR ODD </h1>
+<div class="container">
+<br/> <br/> <br/> <label for="num1"> Enter a number: </label> <br/>
+<input type="number" id = 'num1' /> <br/> <br/><br/><br/>
+<button onclick ="check()"> Check </button> <br/>
+<button onclick ="ClearFields()"> CLEAR </button> <br/>
+<p id='result'>EVEN or ODD </p> </div>
+<a href="index.html" class="btn-home"> <img src="./images/back.png" alt="homepage back button" style="width:42px;height:42p;"></p>
+
+<script>
+
+ function check()
+{ var a = parseFloat(document.getElementById('num1').value);
+  var result = a;
+
+  if (isNaN(a))
+{ alert("Enter a number.");
+  returen;
+}
+ 
+  if(a%2==0)
+{
+  document.getElementById('result').innerHTML= '<mark style="background-color:green";> EVEN</mark>  or ODD';
+}
+ else
+{
+  document.getElementById('result').innerHTML= 'EVEN or <mark style="background-color:red";> ODD </mark>';
+}
+}
+ 
+function ClearFields() 
+{document.getElementById("num1").value = " ";
+ document.getElementById("result").innerHTML = "EVEN or ODD ";
+}
+</script>
+
+
+</body>
+</html>
