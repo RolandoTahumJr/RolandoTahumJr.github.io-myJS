@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>Program 7 by Rolando Tahum </title>
-<link rel="icon" href="./images/icon.jpg">  
 <link href="mystyle.css" rel="stylesheet"/>
 <style>
 body
@@ -15,6 +14,9 @@ div
 { background-image:url('./images/bg9.jpg');
   background-size:cover;
   background-size:100% 116%;
+}
+mark
+{ background-color:green;
 }
 </style>
 </head>
@@ -44,15 +46,15 @@ if (isNaN(a) || isNaN(b)) {
 
   if(a==b)
 {
-  document.getElementById('result').innerHTML= "First num is = to Second num : " + (b - a);
+  document.getElementById('result').innerHTML="<mark>" + a + "</mark>" + " is = to " + "<mark>" + b + "</mark>" + " = " + "<mark>" + (b - a) + "</mark>";
 }
  else if(a>b)
 {
-  document.getElementById('result').innerHTML= "First num is > Second num : " + (b + a);
+  document.getElementById('result').innerHTML="<mark>" + a + "</mark>" + " is > " + "<mark>" + b + "</mark>" + " = " + "<mark>" + (b + a) + "</mark>";
 }
 else if(a<b)
 {
-  document.getElementById('result').innerHTML= "First num is < Second num : " + (b * a) ;
+  document.getElementById('result').innerHTML= "<mark>" + a + "</mark>" + " is < " + "<mark>" + b + "</mark>" + " = " + "<mark>" + (b * a) + "</mark>";
 }
 }
  function ClearFields() {
