@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>Program 9 by Rolando Tahum </title>
-<link rel="icon" href="./images/icon.jpg">  
 <link href="mystyle.css" rel="stylesheet"/>
 <style>
 body
@@ -42,6 +41,10 @@ if (isNaN(a) || isNaN(b)) {
         alert("Enter a number.");
         return;
    	 }
+if (a>=b){
+  alert("Your score cannot be higher than the number of items.");
+  return;
+  }
 
 if (c <= 74)
 { document.getElementById('result').innerHTML= "REMARK : <mark>" + c + "</mark>" + " SEE YOU NEXT SEM :)" ;
@@ -82,7 +85,7 @@ else if (c <= 96.9 )
 {
   document.getElementById('result').innerHTML= "REMARK : <mark> " + c + "</mark>" + " EXCELLENT" ;
 }
-else if (c >100 )
+else if (c <=100 )
 {
   document.getElementById('result').innerHTML= "REMARK : <mark> " + c + "</mark>" + " VERY EXCELLENT" ;
 }
